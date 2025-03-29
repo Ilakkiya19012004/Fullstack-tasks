@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Age<input id="age" type="text">
+        <button onclick="check()">click</button>
+        <div id="demo"></div>
+        <script>
+            function check(){
+            let age=document.getElementById("age").value;
+            let intage=parseInt(age);
+            if (isNaN(intage) || age === "") {
+                    document.getElementById("demo").innerHTML = "❌ Please enter a valid number.";
+                    return;
+                }
+            let user=(intage>=18)?"major":"minor";
+            const x=document.getElementById("demo");
+            x.innerHTML="you are "+user;
+            }
+        </script>
+    </body>
+</html>

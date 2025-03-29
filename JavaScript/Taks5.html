@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+       Text Message<input id="tm" type="text">
+       <button onclick="process()">Submit</button>
+       <div id="demo"></div>
+        <script>
+            function process(){
+                let x=document.getElementById("tm").value;
+                let text=x.trim();
+                let z=(x.length<10)?x.toUpperCase():x.toLowerCase();
+                document.getElementById("demo").innerHTML=z;
+            }
+        </script>
+    </body>
+</html>
