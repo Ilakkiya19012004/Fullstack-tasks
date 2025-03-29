@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        figure {
+            margin: 0;
+            border: 1px solid #ddd;
+            padding: 8px;
+            background-color: #f4f4f4;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        figcaption {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Photography Portfolio</h1>
+
+    <div class="gallery">
+        <figure>
+            <img src="image1.jpg" alt="A serene sunset over the ocean with vibrant colors in the sky">
+            <figcaption>Serene Sunset Over the Ocean</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image2.jpg" alt="A majestic mountain landscape with snow-capped peaks and a clear blue sky">
+            <figcaption>Majestic Mountain Landscape</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image3.jpg" alt="A close-up of a blooming flower with vibrant colors and dew drops">
+            <figcaption>Blooming Flower</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image4.jpg" alt="A bustling cityscape at night with bright lights and busy streets">
+            <figcaption>City Lights at Night</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image5.jpg" alt="A peaceful forest path surrounded by tall trees and sunlight filtering through">
+            <figcaption>Peaceful Forest Path</figcaption>
+        </figure>
+    </div>
+
+</body>
+</html>
