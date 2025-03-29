@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Guidelines Example</title>
+    <style>
+        .container{
+            margin:40px;
+        }
+        button{
+            background-color: blue;
+            color:white;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: aqua;
+            color:black;
+  transition-delay: 0.2s;
+        }
+        @keyframes mymove {
+  0%   {top: 0px;}
+  25%  {top: 200px;}
+  50%  {top: 100px;}
+  75%  {top: 200px;}
+  100% {top: 0px;}
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Hover for transition</button>
+    </div>
+</body>
+</html>

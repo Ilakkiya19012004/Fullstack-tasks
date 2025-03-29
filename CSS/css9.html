@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle with CSS Variables</title>
+    <style>
+        :root {
+            --main-bg-color: white;
+            --main-text-color: black;
+        }
+
+
+        body {
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+
+        .dark-theme {
+            --main-bg-color: black;
+            --main-text-color: white;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --main-bg-color: black;
+                --main-text-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <h1>Welcome to Theme Switcher</h1>
+    <p>This is a demo of CSS variables for theming.</p>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-theme");
+    }
+
+
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+
+
+        localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
+    });
+});
+
+
+    </script>
+</body>
+</html>

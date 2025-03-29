@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible & Printable Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+
+        h1, h2, p {
+            color: #222;
+        }
+
+
+        nav {
+            background: #444;
+            padding: 10px;
+        }
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        #print-button {
+            padding: 10px 15px;
+            background: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        @media print {
+            nav, #print-button {
+                display: none;
+            }
+
+
+            body {
+                font-size: 14pt;
+            }
+
+
+            main {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h2>Main Content</h2>
+        <p>This content will be printed.</p>
+        <button id="print-button">Print Page</button>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+
+    <script>
+        document.getElementById("print-button").addEventListener("click", () => {
+            window.print();
+        });
+    </script>
+</body>
+</html>
